@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificando</title>
+    <link rel="stylesheet" href="/style.css"
+</head>
+<body>
+  <form name="formulario">
+    <header>
+        <h1>Codifique sua mensagem!</h1>
+        <hr />
+    </header>
+    <main>
+
+      <label for="qualPadrao">Digite abaixo o texto que deseja codificar:</label>
+      <br />
+      <input type="text" autocomplete="off" id="texto" />
+      <br />
+
+      <label for="qualPadrao">Qual lingua você deseja usar para codificar? Selecione abaixo</label>
+      <br />
+
+      <select id="escolhas">
+          <option value="valor0" id="valor0" disabled selected>Selecione Aqui!</option>
+          <option value="caesar" id="caesar">Cifra de César</option>
+          <option value="base64" id="base64">Base 64</option>
+      </select>
+      <br />
+
+      <div class="Extra" style="display: none;" id="numero">
+          <p>(escolha o número da chave)</p> 
+          <input id="numeroIncremento" type="number" default="0" min="1" value="1" />
+      </div>
+
+      <br />
+      <br />
+
+      <div class="input">
+          <input type="radio" name="botoes" id="codificar" value="codificar" checked="checked" />
+          <label for="codificar">CODIFICAR</label>
+          <br />
+          <input type="radio" name="botoes" id="decodificar" value="decodificar" />
+          <label for="decodificar">DECODIFICAR</label>
+          <br />
+
+          <button type="submit"> Vamos lá !!</button>
+          <br />
+          <br />
+      </div>
+
+      <label for="qualPadrao"> O seu resultado aparecerá logo abaixo:</label>
+      <br />
+      <hr />
+
+      <textarea type="text" id="mensagemFinal" cols="10" rows="2"></textarea>
+  </main>
+  <hr />
+</form>
+
+    <script src="/script.js"></script>
+</body>
+</html>
